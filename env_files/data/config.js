@@ -28,6 +28,10 @@ const config = {
     src: ['./src/assets/images/**/*.{png,jpg}', '!./src/assets/images/**/__*.{png,jpg}'],
     dest: './dest/assets/images',
   },
+  fonts: {
+    src: './src/assets/fonts/**/*',
+    dest: './dest/assets/fonts',
+  },
 };
 
 module.exports = {

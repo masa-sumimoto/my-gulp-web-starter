@@ -110,7 +110,8 @@ function optimizeNoChangeImages(cb) {
       const imgName = obj;
       imgName.basename = imgName.basename.replace(/^__/, '');
     }))
-    .pipe(dest(config.images.dest));
+    .pipe(dest(config.images.dest))
+    .pipe(browserSync.stream());
   cb();
 }
 
@@ -128,7 +129,8 @@ function optimizeImages(cb) {
       gifsicle(),
       svgo(),
     ]))
-    .pipe(dest(config.images.dest));
+    .pipe(dest(config.images.dest))
+    .pipe(browserSync.stream());
   cb();
 }
 
@@ -141,7 +143,16 @@ function createWebP(cb) {
       }),
     ]))
     .pipe(extReplace('.webp'))
-    .pipe(dest(config.webpImages.dest));
+    .pipe(dest(config.webpImages.dest))
+    .pipe(browserSync.stream());
+  cb();
+}
+
+function sendFonts(cb) {
+  console.log(utils.emShellMsg('sendFonts'));
+  src(config.fonts.src)
+    .pipe(dest(config.fonts.dest))
+    .pipe(browserSync.stream());
   cb();
 }
 
@@ -149,32 +160,33 @@ function activeServer(cb) {
   console.log(utils.emShellMsg('activeServer'));
   browserSync.init({
     server: {
-      baseDir: './dest/',
+      baseDir: config.app.dest,
     },
     port: 8080,
   });
   cb();
 }
 
-function reload(cb) {
-  console.log(utils.emShellMsg('reload'));
-  browserSync.reload();
-  cb();
-}
+// [note] If you want to use browserSync as task.
+// function reload(cb) {
+//   console.log(utils.emShellMsg('reload'));
+//   browserSync.reload();
+//   cb();
+// }
 
 function activeWatch(cb) {
   watch(config.htmls.src, series(minifyHtml));
   watch(config.styles.src, series(buildCss));
   watch(config.scripts.src, series(buildJs));
-  watch(config.images.src, series(parallel(
+  watch(config.images.src, parallel(
     optimizeImages, createWebP, optimizeNoChangeImages,
-  ), reload));
+  ));
   cb();
 }
 
 function clean() {
   console.log(utils.emShellMsg('clean'));
-  return del(['dest']);
+  return del([config.app.dest]);
 }
 
 function showModeInfo(cb) {
@@ -191,6 +203,7 @@ exports.default = series(
     optimizeImages,
     createWebP,
     optimizeNoChangeImages,
+    sendFonts,
   ),
   activeServer,
   activeWatch,
@@ -206,6 +219,7 @@ exports.build = series(
     optimizeImages,
     createWebP,
     optimizeNoChangeImages,
+    sendFonts,
   ),
   showModeInfo,
 );
