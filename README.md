@@ -18,9 +18,9 @@ Linter => ESLint
 Cording Library => jQuery
 
 for Style:
-Utility => gulp-postcss / gulp-sass / Autprefixer
+Utilities => gulp-postcss / gulp-sass / Autprefixer
 Linter => stylelint
-CordingLibrary => Bootstrap4
+Cording Library => Bootstrap4
 
 for Images:
 Minify => imagemin ( and imagemin plugins )
@@ -95,7 +95,7 @@ The sass stylesheets are defined accordingly.
 I also use Bootstrap a lot and prefer styles that override it.
 If you don't like the style, Please remove styles in `src/assets/[dirname]/*.scss` and remove import lines of `src/assets/application.scss`. Design is possible in your style.
 
-## About Images
+### About Images
 You need to save images to `src/assets/images/**/*.{png, jpg, svg, gif}`.  
 The files will be compiled as `dest/assets/images/**/*.{png, jpg, svg, gif}`.  
 Your images are compressed automatically. ( and If your image is `jpg` or `png`, You can also get `webp` image. )  
