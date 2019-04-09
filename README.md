@@ -1,5 +1,5 @@
 # My Gulp Web Site Starter
-This is my starter kid for creating website with Gulp. :full_moon_with_face:
+This is my starter kit for creating website with Gulp. :full_moon_with_face:
 
 
 ## About This Environment
@@ -32,7 +32,7 @@ and many other packages. Thanks.
 ```
 
 
-## What Can You do with this Kid?
+## What Can You do with this Kit?
 - You can start html cording quickly.
 - You can get a browser reload every time you make a change to your code.
 - You can use JavaScript ES6 Way.
