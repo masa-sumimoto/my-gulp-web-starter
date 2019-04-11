@@ -23,7 +23,7 @@ Linter => stylelint
 Cording Library => Bootstrap4
 
 for Images:
-Minify => imagemin ( and imagemin plugins )
+Compress => imagemin ( and imagemin plugins )
 
 for HTML:
 Minify => gulp-htmlmin
