@@ -4,6 +4,7 @@
   "description": "This is my html starter kid with Gulp",
   "main": "app.js",
   "scripts": {
+    "start": "gulp",
     "serve": "gulp",
     "build": "gulp build"
   },
