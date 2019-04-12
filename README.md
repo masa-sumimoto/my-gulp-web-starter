@@ -99,4 +99,4 @@ If you don't like the style, Please remove styles in `src/assets/[dirname]/*.scs
 You need to save images to `src/assets/images/**/*.{png, jpg, svg, gif}`.  
 The files will be compiled as `dest/assets/images/**/*.{png, jpg, svg, gif}`.  
 Your images are compressed automatically. ( and If your image is `jpg` or `png`, You can also get `webp` image. )  
-If you don't want to compress images, Please add `__` to image name as prefix. like `__foo.png`. The image is not compressed.
+If you don't want to compress images, Please add `--no-optimize` as image name suffix. like `bar--no-optimize.jpg`. The image is not compressed and it will be made as new image `bar.jpg`.

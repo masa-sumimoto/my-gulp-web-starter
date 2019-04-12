@@ -20,12 +20,12 @@ const config = {
     bunleFileName: 'bundle',
   },
   images: {
-    src: ['./src/assets/images/**/*.{png,jpg,svg,gif}', '!./src/assets/images/**/__*.{png,jpg,svg,gif}'],
-    srcNoBuild: './src/assets/images/**/__*.{png,jpg,svg,gif}',
+    src: ['./src/assets/images/**/*.{png,jpg,svg,gif}', '!./src/assets/images/**/*--no-optimize.{png,jpg,svg,gif}'],
+    srcNoBuild: './src/assets/images/**/*--no-optimize.{png,jpg,svg,gif}',
     dest: './dest/assets/images',
   },
   webpImages: {
-    src: ['./src/assets/images/**/*.{png,jpg}', '!./src/assets/images/**/__*.{png,jpg}'],
+    src: ['./src/assets/images/**/*.{png,jpg}', '!./src/assets/images/**/*--no-optimize.{png,jpg}'],
     dest: './dest/assets/images',
   },
   fonts: {

@@ -108,7 +108,7 @@ function optimizeNoChangeImages(cb) {
   src(config.images.srcNoBuild)
     .pipe(rename((obj) => {
       const imgName = obj;
-      imgName.basename = imgName.basename.replace(/^__/, '');
+      imgName.basename = imgName.basename.replace(/--no-optimize/, '');
     }))
     .pipe(dest(config.images.dest))
     .pipe(browserSync.stream());
