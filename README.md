@@ -14,7 +14,7 @@ Automatic Browser Loading => browserSync
 
 for Javascript:
 Transpiler => Babel
-Linter => ESLint
+Linter => ESLint (with Prettier)
 Cording Library => jQuery
 
 for Style:

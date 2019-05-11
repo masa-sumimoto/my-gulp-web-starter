@@ -4,5 +4,24 @@ env:
   browser: true
   commonjs: true
   jquery: true
-extends: airbnb
+
+extends:
+  # https://www.npmjs.com/package/eslint-config-airbnb-base
+  - airbnb
+  # https://github.com/prettier/eslint-config-prettier
+  - plugin:prettier/recommended
+  - prettier
+  - prettier/flowtype
+  - prettier/react
+
+plugins:
+  - prettier
+
+rules:
+  prettier/prettier:
+    - error
+    - singleQuote: true
+      trailingComma: all
+      bracketSpacing: true
+
 parser: babel-eslint
