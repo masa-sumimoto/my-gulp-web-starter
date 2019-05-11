@@ -3,32 +3,31 @@ This is my starter kit for creating website with Gulp. :full_moon_with_face:
 
 
 ## About This Environment
-The following list is an introduction to the modules in this environment.
+The following list is an overview of the environment.
 
 ```
-Core:
-Node Packages Management => Yarn
-Task Runner / Module bundler => Gulp4 & Webpack4
-Command Line Utility => minimist
-Automatic Browser Loading => browserSync
+[ About Architecture ]
+Package Manager            : Yarn
+Task Runner                : Gulp
+Module Bundler             : Webpack4 (only for JavaScript)
+JavaScript Transpiler      : Babel
+JavaScript Framework       : jQuery
+JavaScript Base Regulation : airbnb
+JavaScript Linter          : ESLint
+JavaScript Formatter       : ESLint + Prettier
+CSS Pre-processer          : SASS (SCSS)
+CSS Framework              : Bootstrap 4
+CSS Architecture           : BEM
+CSS Linter                 : Stylelint
 
-for Javascript:
-Transpiler => Babel
-Linter => ESLint (with Prettier)
-Cording Library => jQuery
-
-for Style:
-Utilities => gulp-postcss / gulp-sass / Autprefixer
-Linter => stylelint
-Cording Library => Bootstrap4
-
-for Images:
-Compress => imagemin ( and imagemin plugins )
-
-for HTML:
-Minify => gulp-htmlmin
-
-and many other packages. Thanks.
+[ Main modules used by task runner ]
+Watching Command Line      : minimist
+Automatic Browser Loading  : browserSync
+JavaScript Bundring        : Webpack4
+CSS Bundring               : gulp-sass
+CSS Formatting             : gulp-postcss / gulp-sass / Autprefixer
+Image Compressing          : imagemin ( and imagemin plugins )
+HTML Minify                : gulp-htmlmin
 ```
 
 
