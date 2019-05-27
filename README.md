@@ -6,6 +6,9 @@ This is my starter kit for creating website with Gulp. :full_moon_with_face:
 The following list is an overview of the environment.
 
 ```
+[Core Information]
+The environment use Node.js version 10.6.0.
+
 [ About Architecture ]
 Package Manager            : Yarn
 Task Runner                : Gulp
