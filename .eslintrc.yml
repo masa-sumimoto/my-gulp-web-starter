@@ -23,5 +23,6 @@ rules:
     - singleQuote: true
       trailingComma: all
       bracketSpacing: true
+      eol-last: 1
 
 parser: babel-eslint
