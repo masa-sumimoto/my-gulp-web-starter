@@ -120,8 +120,8 @@ function optimizeNoChangeImages(cb) {
         imgName.basename = imgName.basename.replace(/--no-optimize/, '');
       }),
     )
-    .pipe(dest(config.images.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(config.images.dest));
+  // .pipe(browserSync.stream());
   cb();
 }
 
@@ -141,8 +141,8 @@ function optimizeImages(cb) {
         svgo(),
       ]),
     )
-    .pipe(dest(config.images.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(config.images.dest));
+  // .pipe(browserSync.stream());
   cb();
 }
 
@@ -157,8 +157,8 @@ function createWebP(cb) {
       ]),
     )
     .pipe(extReplace('.webp'))
-    .pipe(dest(config.webpImages.dest))
-    .pipe(browserSync.stream());
+    .pipe(dest(config.webpImages.dest));
+  // .pipe(browserSync.stream());
   cb();
 }
 
