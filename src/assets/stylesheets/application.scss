@@ -11,10 +11,8 @@
 @import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/footer';
-// Primitive Parts
-@import 'parts-primitive/tmp';
-@import 'parts-primitive/heading';
-// Complex Parts
-@import 'parts-complex/tmp';
+// Components
+@import 'components/tmp';
+@import 'components/heading';
 // Pages
 @import './pages/tmp';
