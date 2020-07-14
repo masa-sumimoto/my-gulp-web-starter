@@ -6,8 +6,8 @@
 // Main container
 // ---------------------------------
 .Footer {
-  background-color: colors("black-800");
-  color: colors("white");
+  background-color: $footer-bg-color;
+  color: $footer-color;
   height: 50px;
 }
 

@@ -9,18 +9,18 @@
 // media-query-test
 // ------------------------------
 .media-query-test {
-  $_xs-size-color: colors("gray-800");
-  $_sm-size-color: colors("aqua-sky-800");
-  $_md-size-color: colors("living-coral-800");
-  $_lg-size-color: colors("turtle-green-800");
-  $_xl-size-color: colors("mimosa-800");
+  $_xs-size-color: $blue;
+  $_sm-size-color: $pink;
+  $_md-size-color: $orange;
+  $_lg-size-color: $green;
+  $_xl-size-color: $cyan;
 
   &__item {
     padding-top: 20px;
     padding-bottom: 20px;
-    border: 1px solid colors("white");
+    border: 1px solid $white;
     font-size: 1.4rem;
-    color: colors("white");
+    color: $white;
     font-weight: bold;
 
     &--type_mobile-first {

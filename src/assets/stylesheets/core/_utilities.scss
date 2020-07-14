@@ -4,31 +4,6 @@
 /* stylelint-disable */
 
 // ---------------------------------
-// Colors
-// ---------------------------------
-
-// text
-// ------------------------------
-// *** global
-.text-white { color: colors("white") !important; }
-.text-black { color: colors("black")  !important; }
-.text-gray { color: colors("gray") !important; }
-// *** role
-.text-body { color: $body-color !important; }
-.text-body-bg { color: $body-bg !important; }
-.text-body-rvs { color: $body-rvs-color !important; }
-.text-body-rvs-bg { color: $body-rvs-bg !important; }
-
-// bg
-// ------------------------------
-// *** global
-.bg-body { background-color: $body-bg !important; }
-.bg-white { background-color: colors("white") !important; }
-.bg-black { background-color: colors("black") !important; }
-.bg-gray { background-color: colors("gray") !important; }
-
-
-// ---------------------------------
 // Typo
 // ---------------------------------
 .font-size-xl { font-size: $font-size-xl !important; }
